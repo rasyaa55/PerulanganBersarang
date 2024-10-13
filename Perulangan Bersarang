@@ -1,0 +1,184 @@
+package perulangan;
+import java.util.Scanner;
+public class kasir3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int menuUtama, pilih1, pilih2, pilih3, hargaBaru, jumlah, total, grandTotal=0;
+        int hargaSandalSwallow = 115000, hargaSandalFipper = 50000, hargaSandalCrocs = 150000;
+        int hargaSepatuAdidas= 800000, hargaSepatuNike = 900000, hargaSepatuReebok = 750000;
+        do{
+             System.out.println("\nMenu Utama");
+            System.out.println("1. Kasir");
+            System.out.println("2. Admin");
+            System.out.println("3. Owner");
+            System.out.println("4. Exit");
+            System.out.print("Pilih Menu = ");
+            menuUtama = sc.nextInt();
+            switch(menuUtama){
+                case 1:
+                    do{
+            System.out.println("\nMenu Kasir");
+            System.out.println("1. Sandal\n2. Sepatu\n3. Exit");
+            System.out.print("Pilih = "); pilih1= sc.nextInt();
+            switch(pilih1){
+                    case 1:
+                        do{
+                        System.out.println("\nSANDAL");
+                        System.out.println("1. Swallow [" +hargaSandalSwallow + "]");
+                        System.out.println("2. Fipper  [" +hargaSandalFipper + "]");
+                        System.out.println("3. Crocs   [" +hargaSandalCrocs + "]");
+                        System.out.println("4. Selesai");
+                        System.out.print("Pilih Merk = ");
+                        pilih2=sc.nextInt();
+                        switch(pilih2){
+                        case 1:
+                            System.out.println("Sandal Swallow");
+                            System.out.print("Jumlah        = ");
+                            jumlah=sc.nextInt();
+                            total=jumlah*hargaSandalSwallow;
+                            grandTotal = grandTotal+total;
+                            System.out.println("Total       = "+total);
+                            System.out.println("Grand Total = "+grandTotal);
+                            break;
+                        case 2:
+                            System.out.println("Sandal Fipper");
+                            System.out.print("Jumlah  = ");
+                            jumlah=sc.nextInt();
+                            total=jumlah*hargaSandalFipper;
+                            grandTotal = grandTotal+total;
+                            System.out.println("Total       = "+total);
+                            System.out.println("Grand Total = "+grandTotal);
+                            break;
+                        case 3:
+                            System.out.println("Sandal Crocs");
+                            System.out.print("Jumlah  = ");
+                            jumlah=sc.nextInt();
+                            total=jumlah*hargaSandalCrocs;
+                            grandTotal = grandTotal+total;
+                            System.out.println("Total       = "+total);
+                            System.out.println("Grand Total = "+grandTotal);
+                            break;
+                        case 4:
+                            System.out.println("Kembali..");
+                            break;
+                        default:
+                            System.out.println("Pilihan Salah!");
+                    }   
+                    }while(pilih2!=4);
+                    break;
+                    case 2:
+                    do{
+                        System.out.println("\nSepatu");
+                        System.out.println("1. Adidas   [" +hargaSepatuAdidas + "]");
+                        System.out.println("2. Nike     [" +hargaSepatuNike + "]");
+                        System.out.println("3. Reebok   [" +hargaSepatuReebok + "]");
+                        System.out.println("4. Selesai");
+                        System.out.print("Pilih Merk = ");
+                        pilih2=sc.nextInt();
+                        switch(pilih2){
+                        case 1:
+                            System.out.println("Sepatu Adidas");
+                            System.out.print("Jumlah  = ");
+                            jumlah=sc.nextInt();
+                            total=jumlah*hargaSepatuAdidas;
+                            grandTotal = grandTotal+total;
+                            System.out.println("Total       = "+total);
+                            System.out.println("Grand Total = "+grandTotal);
+                            break;
+                        case 2:
+                            System.out.println("Sepatu Nike");
+                            System.out.print("Jumlah  = ");
+                            jumlah=sc.nextInt();
+                            total=jumlah*hargaSepatuNike;
+                            grandTotal = grandTotal+total;
+                            System.out.println("Total       = "+total);
+                            System.out.println("Grand Total = "+grandTotal);
+                            break;
+                        case 3:
+                            System.out.println("Sepatu Reebok");
+                            System.out.print("Jumlah  = ");
+                            jumlah=sc.nextInt();
+                            total=jumlah*hargaSepatuReebok;
+                            grandTotal = grandTotal+total;
+                            System.out.println("Total       = "+total);
+                            System.out.println("Grand Total = "+grandTotal);
+                            break;
+                        case 4:
+                            System.out.println("Kembali..");
+                            break;
+                        default:
+                            System.out.println("Pilihan Salah!");         
+                    }    
+                    }while(pilih2!=4); break;
+                        
+                    case 3:
+                        System.out.println("Kembali...");
+                        break;
+                   
+            }
+                    }while(pilih1!=3);
+                    break;
+                case 2:
+                    do{
+                        System.out.println("\nMenu Admin");
+                        System.out.println("1. Ubah Harga Sandal Swallow\n2. Ubah Harga Sandal Fipper\n3. Ubah Harga Sandal Crocs ");
+                        System.out.println("4. Ubah Harga Sepatu Adidas\n5. Ubah Harga Sepatu Nike\n6. Ubah Harga Sepatu Reebok\n7. Selesai. ");
+                        System.out.print("Pilih = "); pilih3=sc.nextInt();
+                        switch(pilih3){
+                            case 1:
+                                System.out.println("Mengubah harga sandal Swallow");
+                                System.out.print("Harga Baru  = "); hargaBaru=sc.nextInt();
+                                hargaSandalSwallow = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                break;
+                            case 2:
+                                System.out.println("Mengubah harga sandal Fipper");
+                                System.out.print("Harga Baru  = "); hargaBaru=sc.nextInt();
+                                hargaSandalFipper = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                break;
+                            case 3:
+                                System.out.println("Mengubah harga sandal Crocs");
+                                System.out.print("Harga Baru  = "); hargaBaru=sc.nextInt();
+                                hargaSandalCrocs = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                break;
+                            case 4:
+                                System.out.println("Mengubah harga sepatu Adidas");
+                                System.out.print("Harga Baru  = "); hargaBaru=sc.nextInt();
+                                hargaSepatuAdidas = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                break;
+                            case 5:
+                                System.out.println("Mengubah harga sepatu Nike");
+                                System.out.print("Harga Baru  = "); hargaBaru=sc.nextInt();
+                                hargaSepatuNike = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                break;
+                            case 6:
+                                System.out.println("Mengubah harga sepatu Reebok");
+                                System.out.print("Harga Baru  = "); hargaBaru=sc.nextInt();
+                                hargaSepatuReebok = hargaBaru;
+                                System.out.println("Harga telah diubah");
+                                break;
+                            case 7:
+                                System.out.println("Kembali...");
+                                break;
+                            default:
+                                System.out.println("Pilihan Salah");
+                                
+                        }
+                    }while(pilih3!=7);
+                    break;
+                case 3:
+                    System.out.println("Menu Owner");
+                    System.out.println("Total semua pemasukan " +grandTotal);
+                 
+                    
+                    
+            }
+        }while(menuUtama!=4);
+        System.out.println("See You......");
+    }
+    
+}
